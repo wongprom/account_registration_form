@@ -8,7 +8,8 @@ const labelFullname = formSelect.querySelector("#labelFullname")
 const labelUsername = formSelect.querySelector("#label-username")
 const labelEmail = formSelect.querySelector("#label-email")
 const labelPassword = formSelect.querySelector("#label-password")
-console.log(labelPassword)
+const labelConfirm = formSelect.querySelector("#label-confirm")
+console.log(labelConfirm)
 
 const password = formSelect.querySelector("#password");
 let isFormValid = false;
@@ -49,6 +50,9 @@ labelEmail.addEventListener("click", () => {
 })
 labelPassword.addEventListener("click", () => {
   password.focus()
+})
+labelConfirm.addEventListener("click", ()=>{
+  confirm.focus()
 })
 
 fullName.addEventListener("keyup", () => {
