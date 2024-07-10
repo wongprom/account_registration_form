@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <title>Account Registration</title>
-</head>
-<body>
-  <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Account Registration</title>
+  </head>
+  <body>
+    <form class="form-select">
+      <fieldset>
+        <legend>Name</legend>
+        <!-- fname, lname -->
+        <label for="fullname">Your fullname</label>
+        <input id="fullname" type="text" />
+
+        <!-- username -->
+        <label for="username">Username</label>
+        <input id="username" type="text" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Email and Password</legend>
+
+        <!-- email -->
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+
+        <!-- Password -->
+          <label for="password">Password</label>
+          <input id="password" type="password" />
+          <span id="errorPassword" class="text-red"></span>
+        <!-- Confirm password -->
+        <label for="confirm">Confirm Password</label>
+        <input id="confirm" type="password" />
+      </fieldset>
+
+      <!-- button or input for submit form -->
+      <button type="submit">Send</button>
+    </form>
+    <script src="index.js"></script>
+  </body>
 </html>
