@@ -107,12 +107,13 @@ confirm.addEventListener("change", () => {
 
 formSelect.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("submit körs");
+const registrationData = {
+  name: fullName.value,
+  username: username.value,
+  email: email.value,
+  password: password.value,
+};
+  console.log("registrationData", registrationData);
 });
 
-const registrationData = {
-  name: "",
-  username: "",
-  email: "",
-  password: "",
-};
+
