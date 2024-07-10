@@ -5,23 +5,9 @@ const email = formSelect.querySelector("#email");
 const confirm = formSelect.querySelector("#confirm"); */
 const passwordValue = formSelect.querySelector("#password").value;
 
-password.addEventListener("keyup", (event) => {
-  const password = formSelect.querySelector("#password");
-  /* event.target.value.length < 8 ? password.classList.add("border-red") : password.classList.add("border-red") */
-  // Validate password min 8 char
-  if (event.target.value.length < 8) {
-    password.classList.add("border-red");
-    const errorPassword = document.querySelector('#errorPassword');
-    errorPassword.textContent = "Error password fel ";
-  } else {
-    password.classList.remove("border-red");
-    errorPassword.textContent = "";
-  }
-});
+let isFormValid = true;
+// Error messages for inputs
 
-formSelect.addEventListener("submit", (event) => {
-  event.preventDefault();
-});
 
 const registrationData = {
   name: "",
@@ -29,3 +15,26 @@ const registrationData = {
   email: "",
   password: "",
 };
+
+// Validate password min 8 char
+password.addEventListener("keyup", (event) => {
+  const password = formSelect.querySelector("#password");
+  /* event.target.value.length < 8 ? password.classList.add("border-red") : password.classList.add("border-red") */
+  if (event.target.value.length < 8) {
+    password.classList.add("border-red");
+    const errorPassword = document.querySelector('#errorPassword');
+    errorPassword.textContent = "Error password fel ";
+    isFormValid = false;
+  } else {
+    password.classList.remove("border-red");
+    errorPassword.textContent = "";
+    registrationData.name = event.target.value;
+  }
+});
+
+console.log("registrationData: ",registrationData)
+
+formSelect.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
