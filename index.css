@@ -1,11 +1,65 @@
-.border-red{
-    border: 1px solid red;
+body{
+    background-color: #b37145;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: whitesmoke;
 }
+h1{
+    text-align: center;
+}
+
+button {
+    max-width: 110px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.valid-btn{
+    background-color: #2e4cb5;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+legend{
+    font-size: larger;
+}
+
+.border-red{
+    border: 3px solid #d99185;
+}
+
+
 
 .display_none{
     display: none;
 }
 
-.text-red {
-    color: red;
+.validate-text-error {
+    color: #d99185;
+    font-size: small;
+}
+
+input, fieldset{
+    border-radius: 5px;
+}
+
+
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-select{
+    display: flex;
+    background-color:#222b30;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    padding:2rem;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 5px;
 }

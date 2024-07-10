@@ -7,46 +7,61 @@
     <title>Account Registration</title>
   </head>
   <body>
+    <h1>Register Yor Account</h1>
     <form class="form-select">
       <fieldset>
         <legend>Name</legend>
         <!-- fname, lname -->
-        <label id="labelFullname">Your fullname
-          <span class="text-red">*</span>
-        </label>
-        <input id="fullname" type="text"/>
-        <span id="errorFullname" class="text-red"></span>
+        <div class="input-wrapper">
+          <label id="labelFullname"
+            >Your fullname
+            <span class="validate-text-error">*</span>
+          </label>
+          <input id="fullname" type="text" />
+          <span id="errorFullname" class="validate-text-error"></span>
+        </div>
 
         <!-- username -->
-        <label id="label-username">Username
-          <span class="text-red">*</span>
-        </label>
-        <input id="username" type="text" />
-        <span id="errorUsername" class="text-red"></span>
+         <div class="input-wrapper">
+           <label id="label-username"
+           >Username
+           <span class="validate-text-error">*</span>
+          </label>
+          <input id="username" type="text" />
+          <span id="errorUsername" class="validate-text-error"></span>
+        </div>
       </fieldset>
 
       <fieldset>
         <legend>Email and Password</legend>
 
         <!-- email -->
-        <label id="label-email">Email
-          <span class="text-red">*</span>
+        <div class="input-wrapper">
+        <label id="label-email"
+          >Email
+          <span class="validate-text-error">*</span>
         </label>
         <input id="email" type="email" />
-        <span id="errorEmail" class="text-red"></span>
-
+        <span id="errorEmail" class="validate-text-error"></span>
+        </div>
         <!-- Password -->
-          <label id="label-password">Password
-            <span class="text-red">*</span>
-          </label>
-          <input id="password" type="password" />
-          <span id="errorPassword" class="text-red"></span>
-        <!-- Confirm password -->
-        <label id="label-confirm">Confirm Password
-          <span class="text-red">*</span>
+        <div class="input-wrapper">
+        <label id="label-password"
+          >Password
+          <span class="validate-text-error">*</span>
         </label>
-        <input id="confirm" type="password" disabled/>
-        <span id="errorConfirm" class="text-red"></span>
+        <input id="password" type="password" />
+        <span id="errorPassword" class="validate-text-error"></span>
+        </div>
+        <!-- Confirm password -->
+        <div class="input-wrapper">
+        <label id="label-confirm"
+          >Confirm Password
+          <span class="validate-text-error">*</span>
+        </label>
+        <input id="confirm" type="password" disabled />
+        <span id="errorConfirm" class="validate-text-error"></span>
+        </div>
       </fieldset>
 
       <!-- button or input for submit form -->
