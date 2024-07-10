@@ -27,6 +27,7 @@ document.addEventListener("keyup", () => {
   ) {
     isFormValid = true;
     submitBtn.disabled = !isFormValid;
+    submitBtn.classList.add("valid-btn")
   } else {
     isFormValid = false;
     submitBtn.disabled = !isFormValid;
@@ -72,10 +73,12 @@ email.addEventListener("change", () => {
   const isEmailValid = emailRegex.test(email.value);
   if (isEmailValid) {
     errorEmail.textContent = "";
+    email.classList.remove("border-red");
     emailIsOk = true;
   } else {
     const errorEmail = document.querySelector("#errorEmail");
     errorEmail.textContent = "Your email is not valid.";
+    email.classList.add("border-red");
     emailIsOk = false;
   }
 });
