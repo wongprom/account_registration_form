@@ -11,31 +11,42 @@
       <fieldset>
         <legend>Name</legend>
         <!-- fname, lname -->
-        <label for="fullname">Your fullname</label>
+        <label for="fullname">Your fullname
+          <span class="text-red">*</span>
+        </label>
         <input id="fullname" type="text"/>
-        <span id="errorFullname" class="text-red">*</span>
+        <span id="errorFullname" class="text-red"></span>
 
         <!-- username -->
-        <label for="username">Username</label>
+        <label for="username">Username
+          <span class="text-red">*</span>
+        </label>
         <input id="username" type="text" />
-        <span id="errorUsername" class="text-red">*</span>
+        <span id="errorUsername" class="text-red"></span>
       </fieldset>
 
       <fieldset>
         <legend>Email and Password</legend>
 
         <!-- email -->
-        <label for="email">Email</label>
+        <label for="email">Email
+          <span class="text-red">*</span>
+        </label>
         <input id="email" type="email" />
-        <span id="errorEmail" class="text-red">*</span>
+        <span id="errorEmail" class="text-red"></span>
 
         <!-- Password -->
-          <label for="password">Password</label>
+          <label for="password">Password
+            <span class="text-red">*</span>
+          </label>
           <input id="password" type="password" />
           <span id="errorPassword" class="text-red"></span>
         <!-- Confirm password -->
-        <label for="confirm">Confirm Password</label>
-        <input id="confirm" type="password" />
+        <label for="confirm">Confirm Password
+          <span class="text-red">*</span>
+        </label>
+        <input id="confirm" type="password" disabled/>
+        <span id="errorConfirm" class="text-red"></span>
       </fieldset>
 
       <!-- button or input for submit form -->
