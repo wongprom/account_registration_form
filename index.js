@@ -4,6 +4,7 @@ const username = formSelect.querySelector("#username");
 const email = formSelect.querySelector("#email");
 const confirm = formSelect.querySelector("#confirm");
 const submitBtn = formSelect.querySelector("#submit-btn");
+const labelFullname = formSelect.querySelector("#labelFullname")
 
 const password = formSelect.querySelector("#password");
 let isFormValid = false;
@@ -32,6 +33,10 @@ console.log("emailIsOk: ", emailIsOk)
 
   //se om password är valid
 });
+
+labelFullname.addEventListener("click", () => {
+  fullName.focus()
+})
 
 fullName.addEventListener("keyup", () => {
   if (fullName.value === "") {
