@@ -2,6 +2,7 @@ const formSelect = document.querySelector(".form-select");
 const fullName = formSelect.querySelector("#fullname");
 const username = formSelect.querySelector("#username");
 const email = formSelect.querySelector("#email");
+const password = formSelect.querySelector("#password");
 const confirm = formSelect.querySelector("#confirm");
 const submitBtn = formSelect.querySelector("#submit-btn");
 const labelFullname = formSelect.querySelector("#labelFullname")
@@ -9,19 +10,14 @@ const labelUsername = formSelect.querySelector("#label-username")
 const labelEmail = formSelect.querySelector("#label-email")
 const labelPassword = formSelect.querySelector("#label-password")
 const labelConfirm = formSelect.querySelector("#label-confirm")
-console.log(labelConfirm)
 
-const password = formSelect.querySelector("#password");
+
 let isFormValid = false;
 submitBtn.disabled = !isFormValid;
 
 emailIsOk = false
 
 document.addEventListener("keyup", () => {
-  console.log("evrnt på document");
-  // se om fullname är valid
-console.log("emailIsOk: ", emailIsOk)
-  // disable button or not!!!!!!!!!
   if (
     fullName.value != "" &&
     password.value.length > 7 &&
@@ -35,8 +31,6 @@ console.log("emailIsOk: ", emailIsOk)
     isFormValid = false;
     submitBtn.disabled = !isFormValid;
   }
-
-  //se om password är valid
 });
 
 labelFullname.addEventListener("click", () => {
@@ -76,16 +70,13 @@ username.addEventListener("keyup", () => {
 email.addEventListener("change", () => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isEmailValid = emailRegex.test(email.value);
-
   if (isEmailValid) {
     errorEmail.textContent = "";
-    console.log("valid email");
     emailIsOk = true;
   } else {
     const errorEmail = document.querySelector("#errorEmail");
     errorEmail.textContent = "Your email is not valid.";
     emailIsOk = false;
-    console.log("not valid email");
   }
 });
 
@@ -106,8 +97,6 @@ password.addEventListener("keyup", (event) => {
 });
 
 confirm.addEventListener("change", () => {
-  console.log("password", password.value);
-  console.log("confirm", confirm.value);
   if (password.value === confirm.value) {
     errorConfirm.textContent = "";
   } else {
@@ -119,7 +108,6 @@ confirm.addEventListener("change", () => {
 formSelect.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log("submit körs");
-  // validateForm()§
 });
 
 const registrationData = {
