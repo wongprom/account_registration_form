@@ -12,11 +12,13 @@
         <legend>Name</legend>
         <!-- fname, lname -->
         <label for="fullname">Your fullname</label>
-        <input id="fullname" type="text" />
+        <input id="fullname" type="text"/>
+        <span id="errorFullname" class="text-red"></span>
 
         <!-- username -->
         <label for="username">Username</label>
         <input id="username" type="text" />
+        <span id="errorUsername" class="text-red"></span>
       </fieldset>
 
       <fieldset>
@@ -36,7 +38,7 @@
       </fieldset>
 
       <!-- button or input for submit form -->
-      <button type="submit">Send</button>
+      <button id="submit-btn" type="submit">Send</button>
     </form>
     <script src="index.js"></script>
   </body>
