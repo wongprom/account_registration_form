@@ -34,21 +34,11 @@ document.addEventListener("keyup", () => {
   }
 });
 
-labelFullname.addEventListener("click", () => {
-  fullName.focus()
-})
-labelUsername.addEventListener("click", () => {
-  username.focus()
-})
-labelEmail.addEventListener("click", () => {
-  email.focus()
-})
-labelPassword.addEventListener("click", () => {
-  password.focus()
-})
-labelConfirm.addEventListener("click", ()=>{
-  confirm.focus()
-})
+formSelect.querySelectorAll('label').forEach(label=>
+  label.addEventListener('click', (e) => {
+    e.target.nextElementSibling.focus();
+  })
+)
 
 fullName.addEventListener("keyup", () => {
   if (fullName.value === "") {
